@@ -232,6 +232,34 @@
                   parent="academico_menu"
                   action="session_list_action"/>
     
+        <record model="ir.ui.view" id="wizard_form_view">
+            <field name="name">wizard.form</field>
+            <field name="model">academico.wizard</field>
+            <field name="arch" type="xml">
+                <form string="Add Attendees">
+                    <group>
+                        <field name="session_ids"/>
+                        <field name="attendee_ids"/>                        
+                    </group>
+                     <footer>
+                        <button name="subscribe" type="object"
+                                string="Subscribe" class="oe_highlight"/>
+                        or
+                        <button special="cancel" string="Cancel"/>
+                    </footer>
+
+                </form>
+            </field>
+        </record>
+
+        <act_window id="launch_session_wizard"
+                    name="Add Attendees"
+                    binding_model="academico.session"
+                    res_model="academico.wizard"
+                    view_mode="form"
+                    target="new"/>
+
+    
     
 
 </odoo>
