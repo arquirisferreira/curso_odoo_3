@@ -1,4 +1,6 @@
- <report
+<odoo>
+
+    <report
         id="report_session"
         model="academico.session"
         string="Session Report"
@@ -24,3 +26,5 @@
             </t>
         </t>
     </template>
+
+</odoo>
